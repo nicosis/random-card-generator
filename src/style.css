@@ -1,4 +1,11 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 body {
-  background-color: violet;
+  background-color: green;
+}
+
+#container {
+  width: 35vw;
+  margin: auto;
+  margin-top: 10vh;
+  height: 400px;
 }

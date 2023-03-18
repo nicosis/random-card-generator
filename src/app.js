@@ -7,6 +7,8 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
+  // document.querySelector("#card").innerHTML = resultCard;
+
   let randomNumber = () => Math.floor(Math.random() * 13) + 1;
   let randomSuit = () => Math.floor(Math.random() * 4) + 1;
 
@@ -43,8 +45,9 @@ window.onload = function() {
     }
   };
 
-  let resultCard = "";
-  resultCard = card(randomNumber()) + " of " + suit(randomSuit());
+  let resultCard = card(randomNumber()) + " of " + suit(randomSuit());
 
+  // let resultCard = () => card(randomNumber()) + " of " + suit(randomSuit());
   console.log(resultCard);
+  document.querySelector("#card").innerHTML = resultCard;
 };
