@@ -4,8 +4,19 @@ body {
 }
 
 #container {
-  width: 35vw;
+  background-color: white;
+  width: 22vw;
+  height: 450px;
   margin: auto;
   margin-top: 10vh;
-  height: 500px;
+  border-radius: 3%;
+  font-size: 2em;
+}
+
+.bottom {
+  transform: rotate(180deg);
+}
+
+#number {
+  font-size: 120px;
 }
