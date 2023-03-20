@@ -33,6 +33,8 @@ window.onload = function() {
 
   let cardNumber = document.querySelector("#number");
   let cardSuit = document.querySelector("#cardSuit");
+  let cardSuit2 = document.querySelector("#cardSuit2");
   cardNumber.textContent = card();
   cardSuit.textContent = suit();
+  cardSuit2.textContent = cardSuit.textContent;
 };
