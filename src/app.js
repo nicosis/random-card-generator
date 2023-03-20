@@ -9,45 +9,30 @@ window.onload = function() {
   //write your code here
   // document.querySelector("#card").innerHTML = resultCard;
 
-  let randomNumber = () => Math.floor(Math.random() * 13) + 1;
-  let randomSuit = () => Math.floor(Math.random() * 4) + 1;
+  let cardValues = [
+    "A",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K"
+  ];
 
-  let card = num => {
-    switch (num) {
-      case 1:
-        return "A";
-        break;
-      case 11:
-        return "J";
-        break;
-      case 12:
-        return "Q";
-        break;
-      case 13:
-        return "K";
-        break;
-      default:
-        return num.toString();
-        break;
-    }
-  };
+  let suitValues = ["♠", "♣", "♥", "♦"];
 
-  let suit = num => {
-    switch (num) {
-      case 1:
-        return "Spade ♠";
-      case 2:
-        return "Club ♣";
-      case 3:
-        return "Heart ♥";
-      case 4:
-        return "Diamond ♦";
-    }
-  };
+  let card = () => cardValues[Math.floor(Math.random() * cardValues.length)];
+  let suit = () => suitValues[Math.floor(Math.random() * suitValues.length)];
 
-  let resultCard = card(randomNumber()) + " of " + suit(randomSuit());
-
-  // let resultCard = () => card(randomNumber()) + " of " + suit(randomSuit());
-  console.log(resultCard);
-  document.querySelector("#card").innerHTML = resultCard;
+  let cardNumber = document.querySelector("#number");
+  let cardSuit = document.querySelector("#cardSuit");
+  cardNumber.textContent = card();
+  cardSuit.textContent = suit();
 };
