@@ -3,49 +3,59 @@ body {
   background-color: green;
 }
 
-.card * {
+/* .card * {
   border: 1px dotted rebeccapurple;
-}
+} */
 
 .card {
   width: 25%;
   aspect-ratio: 1/1.4;
   border: 1px solid black;
   border-radius: 10px;
-  padding: 2px;
   position: relative;
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   margin: auto;
   margin-top: 3%;
   font-size: 42px;
+  box-shadow: 5px 5px 10px black;
 }
 
 .card-middle {
+  position: relative;
   display: flex;
-  justify-content: center;
-  font-size: 5em;
   align-items: center;
+  margin: auto;
+  font-size: 5em;
+}
+
+.card-top,
+.card-bottom {
+  display: flex;
+  position: absolute;
+}
+
+.card-top {
+  top: 0px;
+  left: 10px;
 }
 
 .card-bottom {
+  bottom: 0px;
+  right: 10px;
   transform: rotate(180deg);
 }
-/* .card-top,
-.card-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-} */
 
-/* .card-top {
-  top: 4px;
-  left: 4px;
+@media screen and (max-width: 670px) {
+  .card-middle {
+    display: none;
+  }
 }
-
-.card-bottom {
-  bottom: 4px;
-  right: 4px;
-} */
+@media screen and (max-width: 400px) {
+  .card-bottom {
+    display: none;
+  }
+}
+@media screen and (max-width: 300px) {
+  .card {
+    display: none;
+  }
+}
