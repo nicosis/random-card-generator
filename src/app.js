@@ -11,7 +11,6 @@ window.onload = function() {
 
   let cardValues = [
     "A",
-    "1",
     "2",
     "3",
     "4",
@@ -40,4 +39,12 @@ window.onload = function() {
   cardNumTop.textContent = cardNum.textContent;
   cardSuitBot.textContent = cardSuitTop.textContent;
   cardNumBot.textContent = cardNum.textContent;
+
+  if (cardSuitTop.textContent === "♥" || cardSuitTop.textContent === "♦") {
+    document.querySelector(".card").style.color = "red";
+  }
+
+  if (cardNum.textContent === "A") {
+    document.querySelector("#cardNum").textContent = cardSuitTop.textContent;
+  }
 };
