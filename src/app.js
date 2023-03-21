@@ -31,11 +31,13 @@ window.onload = function() {
   let card = () => cardValues[Math.floor(Math.random() * cardValues.length)];
   let suit = () => suitValues[Math.floor(Math.random() * suitValues.length)];
 
-  /*   let cardNumber = document.querySelector("#number");
-  let cardSuit = document.querySelector("#cardSuit");
-  cardNumber.textContent = card();
-  cardSuit.textContent = suit();
-  cardSuitBottom.textContent = cardSuit.textContent;
-  cardNumberTop.textContent = cardNumber.textContent;
-  cardNumberBottom.textContent = cardNumber.textContent; */
+  // let cardNum = document.querySelector("#cardNum");
+  // let cardSuit = document.querySelector("#cardSuitTop");
+
+  // porque primero no se llama al id con querySelector?
+  cardNum.textContent = card();
+  cardSuitTop.textContent = suit();
+  cardNumTop.textContent = cardNum.textContent;
+  cardSuitBot.textContent = cardSuitTop.textContent;
+  cardNumBot.textContent = cardNum.textContent;
 };
