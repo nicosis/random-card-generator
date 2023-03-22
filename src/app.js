@@ -2,13 +2,7 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  //write your code here
-  // document.querySelector("#card").innerHTML = resultCard;
-
+function cardGenerator() {
   let cardValues = [
     "A",
     "2",
@@ -30,8 +24,8 @@ window.onload = function() {
   let card = () => cardValues[Math.floor(Math.random() * cardValues.length)];
   let suit = () => suitValues[Math.floor(Math.random() * suitValues.length)];
 
-  // let cardNum = document.querySelector("#cardNum");
-  // let cardSuit = document.querySelector("#cardSuitTop");
+  let cardNum = document.querySelector("#cardNum");
+  let cardSuit = document.querySelector("#cardSuitTop");
 
   // porque primero no se llama al id con querySelector?
   cardNum.textContent = card();
@@ -47,4 +41,10 @@ window.onload = function() {
   if (cardNum.textContent === "A") {
     document.querySelector("#cardNum").textContent = cardSuitTop.textContent;
   }
-};
+}
+
+window.onload = cardGenerator;
+
+//boton
+let button = document.querySelector("#changeCardBtn");
+button.addEventListener("click", cardGenerator);
