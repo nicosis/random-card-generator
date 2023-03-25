@@ -3,9 +3,8 @@ body {
   background-color: green;
 }
 
-.container {
-  /* display: flex;
-  align-items: center; */
+* {
+  font-family: serif;
 }
 
 .card {
@@ -25,7 +24,8 @@ body {
   display: flex;
   align-items: center;
   margin: auto;
-  font-size: 5em;
+  /* font-size: 5em; */
+  font-size: clamp(2em, 18vw, 5em);
 }
 
 .card-top,
@@ -45,17 +45,17 @@ body {
   transform: rotate(180deg);
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 540px) {
   .card-middle {
     display: none;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 340px) {
   .card-bottom {
     display: none;
   }
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
   .card {
     display: none;
   }
