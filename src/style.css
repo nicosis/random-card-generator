@@ -44,36 +44,22 @@ body {
   transform: rotate(180deg);
 }
 
-@media screen and (max-width: 540px) {
-  .card-middle {
-    display: none;
-  }
-}
-@media screen and (max-width: 340px) {
-  .card-bottom {
-    display: none;
-  }
-}
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 580px) {
   .card {
     display: none;
   }
 }
 
-/* boton */
-
-.container {
-  position: absolute;
-}
-
 .btn-container {
   display: flex;
   flex-direction: column;
-  width: 120px;
-  position: relative;
-  top: 40px;
-  left: 40px;
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5em;
 }
+
 button {
   background-color: gold;
   border-radius: 28px;
