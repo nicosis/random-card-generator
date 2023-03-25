@@ -1,4 +1,3 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
@@ -47,13 +46,18 @@ function cardGenerator() {
   }
 }
 
-//boton
+//boton new card
 let button = document.querySelector("#changeCardBtn");
 button.addEventListener("click", cardGenerator);
 
+//timer
 let interval;
-let startInterval = () =>
-  !interval ? (interval = setInterval(cardGenerator, 500)) : null;
+let startInterval = () => {
+  if (!interval) {
+    interval = setInterval(cardGenerator, 1000);
+  }
+};
+
 let stopInterval = () => {
   clearInterval(interval);
   interval = null;
@@ -61,10 +65,3 @@ let stopInterval = () => {
 
 document.querySelector("#startBtn").addEventListener("click", startInterval);
 document.querySelector("#stopBtn").addEventListener("click", stopInterval);
-
-// Metodo con ID's
-// cardNum.textContent = card();
-// cardSuitTop.textContent = suit();
-// cardNumTop.textContent = cardNum.textContent;
-// cardSuitBot.textContent = cardSuitTop.textContent;
-// cardNumBot.textContent = cardNum.textContent;
