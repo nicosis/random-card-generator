@@ -51,6 +51,17 @@ function cardGenerator() {
 let button = document.querySelector("#changeCardBtn");
 button.addEventListener("click", cardGenerator);
 
+let interval;
+let startInterval = () =>
+  !interval ? (interval = setInterval(cardGenerator, 500)) : null;
+let stopInterval = () => {
+  clearInterval(interval);
+  interval = null;
+};
+
+document.querySelector("#startBtn").addEventListener("click", startInterval);
+document.querySelector("#stopBtn").addEventListener("click", stopInterval);
+
 // Metodo con ID's
 // cardNum.textContent = card();
 // cardSuitTop.textContent = suit();

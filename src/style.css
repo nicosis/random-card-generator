@@ -24,7 +24,6 @@ body {
   display: flex;
   align-items: center;
   margin: auto;
-  /* font-size: 5em; */
   font-size: clamp(2em, 18vw, 5em);
 }
 
@@ -62,11 +61,23 @@ body {
 }
 
 /* boton */
-#changeCardBtn {
+
+.container {
+  position: absolute;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  position: relative;
+  top: 40px;
+  left: 40px;
+}
+button {
   background-color: gold;
   border-radius: 28px;
-  box-shadow: 6px 5px 10px #0ddcdc;
-  position: relative;
-  bottom: 0%;
-  left: 0%;
+  box-shadow: 5px 5px 8px #8a8212;
+  margin: 2px;
+  font-weight: bold;
 }
